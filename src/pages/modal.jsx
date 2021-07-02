@@ -15,18 +15,18 @@ import RenderingSelect from './renderSelect'
 
 const ModalWrapper = styled.div`
   box-sizing: border-box;
-  display: ${(props) => (props.visible ? 'block' : 'none')};
+  display:flex;
+  justify-content:center;
+  align-items:center;
   position: fixed;
   top: 0px;
   left:0px;
   z-index: 1000;
   overflow: auto;
-  width:1920px;
-  height:1200px;
+  width:100%;
+  height:100%;
   background: transparent url('img/지역.png') 0% 0% no-repeat padding-box;
   opacity: 1;
-  margin-left:560px;
-  margin-right:560px
 `
 
 const ModalInner = styled.div`
@@ -34,12 +34,9 @@ const ModalInner = styled.div`
   flex-direction: column;
   position: relative;
   align-items:center;
-  justify-content:sapce-between ;
   background-color: #fff;
   width: 800px;
   height: 780px;
-  top: 210px;
-  left: 560px
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border: 1px solid #BDBDBD;

@@ -18,7 +18,6 @@ const StyledTextField = withStyles({
     borderRadius: '5px',
     opacity: '1',
     zIndex:'10',
-    marginLeft:'365px'
   },
 })(InputBase);
 
@@ -38,8 +37,8 @@ const StyledButton = withStyles({
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width:1920px;
-  height:1200px;
+  width:100%;
+  height:100%;
   opacity:1
   position: relative
 `
@@ -47,11 +46,6 @@ const BarWrapper=styled.div`
   display: flex;
   align-items: flex-start;
   padding-top: 20px;
-  height: 210px;
-  width:1520px;
-  height:1200px;
-  margin-left:340px;
-  margin-right:60px;
 `
 
 
@@ -112,7 +106,11 @@ const setPolygonFunction = (inputValue)=>{
           mapDivId={process.env.API_KEY} 
           style={{
             width: '100%', 
-            height: '95vh'
+            height: '95vh',
+            display:'flex',
+            position:'relative',
+            overflow:'hidden',
+            justifyContent:'center'
           }}
           defaultCenter={{ lat: 37.554722, lng: 126.970833 }} 
           defaultZoom={13} 
